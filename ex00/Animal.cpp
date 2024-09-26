@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 18:06:25 by akovalev          #+#    #+#             */
-/*   Updated: 2024/09/25 18:45:35 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/09/26 19:47:52 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ Animal& Animal::operator=(const Animal& original)
 
 void Animal::makeSound() const
 {
-	std::cout << "\033[1;93m*Disturbing gurgling sounds* Is it a meow or a bark? Who can tell!\033[0m"  << std::endl;
+	std::cout << "\033[1;93m*Disturbing gurgling sounds* You can't tell if it a meow or a bark...\033[0m"  << std::endl;
 }
 
 std::string Animal::getType() const
