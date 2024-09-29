@@ -44,7 +44,7 @@ Brain& Brain::operator=(const Brain& original)
 
 void	Brain::implementIdea(int id, const std::string& idea)
 {
-	if (id < 0 || id > 100)
+	if (id < 0 || id > 99)
 		std::cout << "Invalid id, only range of 0-100 is allowed";
 	else 
 		this->_ideas[id] = idea; 
@@ -52,7 +52,7 @@ void	Brain::implementIdea(int id, const std::string& idea)
 }
 std::string Brain::fetchIdea(int id) const
 {
-	if (id < 0 || id > 100)
+	if (id < 0 || id > 99)
 	{
 		std::cout << "Invalid id, only range of 0-100 is allowed";
 		return "";

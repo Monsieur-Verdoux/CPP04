@@ -17,6 +17,11 @@
 
 int main()
 {
+	const Animal* j = new Dog();
+	const Animal* i = new Cat();
+	delete j;
+	delete i;
+
 	Animal** animals = new Animal*[10];
 
 	for (int i = 0; i < 10; i++)
@@ -132,8 +137,8 @@ int main()
 	std::cout << std::endl;
 
 	*Dumle = *Pepsi;
-	std::cout << std::endl;
 
+	std::cout << std::endl;
 	std::cout << "\033[1;93mIdeas after reassignment: \033[0m" << std::endl;
 	std::cout << "\033[1;36mPepsi's idea [0]: \033[0m" << Pepsi->fetchBrain()->fetchIdea(0) << std::endl;
 	std::cout << "\033[1;36mDumle's idea [0]: \033[0m" << Dumle->fetchBrain()->fetchIdea(0) << std::endl;
@@ -147,8 +152,14 @@ int main()
 	std::cout << "\033[1;36mPepsi's idea [0]: \033[0m" << Pepsi->fetchBrain()->fetchIdea(0) << std::endl;
 	std::cout << std::endl;
 
+	std::cout << std::endl;
+	std::cout << "\033[1;93mTesting incorrect idea index! \033[0m" << std::endl;
+	std::cout << std::endl;
+	std::cout << "\033[1;36mPepsi's idea [100]: \033[0m" << Pepsi->fetchBrain()->fetchIdea(100) << std::endl;
+	std::cout << "\033[1;36mDumle's idea [-1]: \033[0m" << Dumle->fetchBrain()->fetchIdea(-1) << std::endl;
+
 	delete Dumle;
 	delete Pepsi;
-	
+
 	return 0;
 }
