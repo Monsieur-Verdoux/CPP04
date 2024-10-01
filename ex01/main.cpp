@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 18:08:32 by akovalev          #+#    #+#             */
-/*   Updated: 2024/09/26 20:15:07 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/10/01 16:40:13 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -144,7 +144,6 @@ int main()
 	std::cout << "\033[1;36mDumle's idea [0]: \033[0m" << Dumle->fetchBrain()->fetchIdea(0) << std::endl;
 	std::cout << std::endl;
 
-	std::cout << std::endl;
 	Dumle->fetchBrain()->implementIdea(0, "Purr loudly");
 
 	std::cout << "\033[1;93mAfter changing Dumle's idea [0]: \033[0m" << std::endl;
@@ -152,7 +151,6 @@ int main()
 	std::cout << "\033[1;36mPepsi's idea [0]: \033[0m" << Pepsi->fetchBrain()->fetchIdea(0) << std::endl;
 	std::cout << std::endl;
 
-	std::cout << std::endl;
 	std::cout << "\033[1;93mTesting incorrect idea index! \033[0m" << std::endl;
 	std::cout << std::endl;
 	std::cout << "\033[1;36mPepsi's idea [100]: \033[0m" << Pepsi->fetchBrain()->fetchIdea(100) << std::endl;

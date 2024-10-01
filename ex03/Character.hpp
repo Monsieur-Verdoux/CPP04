@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 14:04:19 by akovalev          #+#    #+#             */
-/*   Updated: 2024/09/30 14:04:19 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/10/01 15:48:22 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class Character : public ICharacter
 		Character(const Character& original);
 		Character& operator=(const Character& original);
 
-		std::string const & getName() const;
+		std::string const & getName() const override;
 		virtual void equip(AMateria* m) override;
 		virtual void unequip(int idx) override;
 		virtual void use(int idx, ICharacter& target) override;

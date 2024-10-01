@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 16:25:11 by akovalev          #+#    #+#             */
-/*   Updated: 2024/09/30 16:25:11 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/10/01 16:38:26 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,13 +74,16 @@ int main(void)
 		ICharacter* myShadow = new Character(*dynamic_cast<Character*>(me));
 		myShadow->use(0, *me);
 		myShadow->use(1, *me);
-
-		myShadow->unequip(1);
-		myShadow->equip(ice1);
-
-		myShadow->use(1, *me);
 		me->use(1, *myShadow);
 
+		me->unequip(1);
+		me->equip(ice1);
+	
+		me->use(1, *myShadow);
+		myShadow->use(1, *me);
+		
+	
+		delete cure;
 		delete me;
 		delete myShadow;
 	}
@@ -96,7 +99,8 @@ int main(void)
 		std::cout << std::endl;
 		std::cout << "\033[1;93mAssigning more than 4 materias to Materia Source: \033[0m" << std::endl;
 		std::cout << std::endl;
-		src->learnMateria(new Ice());
+		Ice* ice = new Ice();
+		src->learnMateria(ice);
 
 		ICharacter* me = new Character("me");
 		ICharacter* bob = new Character("bob");
@@ -142,6 +146,7 @@ int main(void)
 		me->equip(tmp3);
 		me->equip(tmp4);
 		
+		delete ice;
 		delete tmp4;
 		delete src;
 		delete bob;
